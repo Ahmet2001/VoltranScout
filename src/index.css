@@ -1,0 +1,371 @@
+:root {
+    /* Premium Dark Theme Palette */
+    --bg-app: #0a0a0c;
+    --bg-panel: #141418;
+    --bg-card: #1c1c22;
+
+    /* Brand Colors - Neon Vibe */
+    --primary: #6366f1;
+    /* Indigo-500 */
+    --primary-glow: rgba(99, 102, 241, 0.4);
+    --accent: #ec4899;
+    /* Pink-500 */
+    --accent-glow: rgba(236, 72, 153, 0.4);
+
+    /* Text */
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+
+    /* Utility */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(28, 28, 34, 0.6);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Layout Helpers */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    /* Safe area for mobile */
+}
+
+/* Scrollbar Hide */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-card);
+    border-radius: 4px;
+}
+
+/* Button Reset */
+/* Button Reset */
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    padding: 0;
+}
+
+/* --- PREMIMUM UTILITIES (Tailwind Emulation) --- */
+
+/* Text */
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-3xl {
+    font-size: 2rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+.tracking-wider {
+    letter-spacing: 0.05em;
+}
+
+.tracking-tighter {
+    letter-spacing: -0.05em;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Colors */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-red-500 {
+    color: #ef4444;
+}
+
+.text-green-400 {
+    color: #4ade80;
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-card {
+    background-color: var(--bg-card);
+}
+
+.bg-panel {
+    background-color: var(--bg-panel);
+}
+
+.bg-black\/20 {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bg-black\/60 {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Flex */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.gap-3 {
+    gap: 12px;
+}
+
+.gap-4 {
+    gap: 16px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gap-4 {
+    gap: 16px;
+}
+
+/* Spacing & Sizing */
+.w-full {
+    width: 100%;
+}
+
+.p-2 {
+    padding: 8px;
+}
+
+.p-3 {
+    padding: 12px;
+}
+
+.p-4 {
+    padding: 16px;
+}
+
+.p-6 {
+    padding: 24px;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.mb-1 {
+    margin-bottom: 4px;
+}
+
+.mb-4 {
+    margin-bottom: 16px;
+}
+
+.mb-6 {
+    margin-bottom: 24px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+.mt-10 {
+    margin-top: 40px;
+}
+
+.pb-24 {
+    padding-bottom: 96px;
+}
+
+.pl-12 {
+    padding-left: 48px;
+}
+
+.pr-4 {
+    padding-right: 16px;
+}
+
+/* Position */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-50 {
+    z-index: 50;
+}
+
+.sticky {
+    position: sticky;
+}
+
+/* Effects */
+.rounded-xl {
+    border-radius: 12px;
+}
+
+.rounded-2xl {
+    border-radius: 16px;
+}
+
+.rounded-3xl {
+    border-radius: 24px;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+}
+
+.border {
+    border: 1px solid var(--glass-border);
+}
+
+.border-b {
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.outline-none {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+/* Interactive */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.active\:scale-95:active {
+    transform: scale(0.95);
+}
+
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
